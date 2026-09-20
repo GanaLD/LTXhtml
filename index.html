@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>LTX — The world model</title>
+<title>LTX — O modelo de mundo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -144,41 +144,41 @@ button.cell:disabled{cursor:default}
   <video id="v4r" class="media" src="https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/video-4-reverse.mp4" muted playsinline preload="auto" aria-hidden="true"></video>
 
   <section class="hero" aria-labelledby="hero-title">
-    <h1 id="hero-title"><span>The</span> <span>world</span> <span>model</span></h1>
-    <p>LTX builds open world models that give you full control, from production-grade video to systems that understand and operate in the physical world.</p>
+    <h1 id="hero-title"><span>O</span> <span>modelo</span> <span>de mundo</span></h1>
+    <p>A LTX cria modelos de mundo aberto que oferecem controle total — de vídeos com qualidade de produção a sistemas que compreendem e operam no mundo físico.</p>
   </section>
 
-  <div class="controller" id="controller" role="group" aria-label="Scene state controller">
+  <div class="controller" id="controller" role="group" aria-label="Controlador de estado da cena">
     <div class="track glass" aria-hidden="true"></div>
     <div class="capsule glass" aria-hidden="true"></div>
     <div class="cells">
-      <div class="cell select-label" data-index="0">Select state →</div>
-      <button class="cell" type="button" data-index="1" data-branch="scene" disabled>Scene</button>
-      <button class="cell" type="button" data-index="2" data-branch="light" disabled>Lighting</button>
-      <button class="cell" type="button" data-index="3" data-branch="colorway" disabled>Clothing</button>
-      <button class="cell" type="button" data-index="4" data-branch="fullLook" disabled>Cast</button>
+      <div class="cell select-label" data-index="0">Selecione →</div>
+      <button class="cell" type="button" data-index="1" data-branch="scene" disabled>Cena</button>
+      <button class="cell" type="button" data-index="2" data-branch="light" disabled>Iluminação</button>
+      <button class="cell" type="button" data-index="3" data-branch="colorway" disabled>Vestuário</button>
+      <button class="cell" type="button" data-index="4" data-branch="fullLook" disabled>Elenco</button>
     </div>
   </div>
 
   <header>
     <div class="brand-wrap">
-      <a class="brand" href="https://ltx.io/" aria-label="LTX home">
+      <a class="brand" href="https://ltx.io/" aria-label="Página inicial da LTX">
         <svg viewBox="0 0 75 32" role="img" aria-hidden="true" focusable="false">
           <path fill="#fff" d="M0 3h6v21h15v5H0V3z"/>
           <path fill="#fff" d="M24 3h26v5H40v21h-6V8H24V3z"/>
           <path fill="#fff" d="M51 3h7.2l5.3 8.1L68.8 3H75l-8.2 12.2L75 29h-7.1l-5-8.8-5.6 8.8H51l8.5-13.2L51 3z"/>
         </svg>
       </a>
-      <div class="meta"><span>LTX-2.5 is here</span><span class="smart">Smarter. Faster</span></div>
+      <div class="meta"><span>LTX-2.5 chegou</span><span class="smart">Mais inteligente. Mais rápido</span></div>
     </div>
     <span aria-hidden="true"></span>
-    <a class="try" href="https://app.ltx.io/" target="_blank" rel="noopener noreferrer">Try now</a>
+    <a class="try" href="https://app.ltx.io/" target="_blank" rel="noopener noreferrer">Testar agora</a>
   </header>
 
-  <div id="status" class="live" role="status" aria-live="polite" aria-atomic="true">Loading scene.</div>
+  <div id="status" class="live" role="status" aria-live="polite" aria-atomic="true">Carregando cena.</div>
   <div id="notice" class="notice" role="alert">
-    <span id="noticeText">Transition failed.</span>
-    <button id="retry" type="button">Retry</button>
+    <span id="noticeText">Falha na transição.</span>
+    <button id="retry" type="button">Tentar novamente</button>
   </div>
 </main>
 <script>
@@ -200,10 +200,10 @@ button.cell:disabled{cursor:default}
     v4f:document.getElementById('v4f'),v4r:document.getElementById('v4r')
   };
   var branches={
-    scene:{key:'scene',label:'Scene',index:1,forward:videos.v2f,reverse:videos.v2r,forwardDuration:2.08,reverseDuration:2.08,reverseGuard:.18},
-    light:{key:'light',label:'Lighting',index:2,forward:videos.v3f,reverse:videos.v3r,forwardDuration:2.08,reverseDuration:2.04,reverseGuard:.08},
-    colorway:{key:'colorway',label:'Clothing',index:3,forward:videos.v1f,reverse:videos.v1r,forwardDuration:2.08,reverseDuration:2.08,reverseGuard:.08},
-    fullLook:{key:'fullLook',label:'Cast',index:4,forward:videos.v4f,reverse:videos.v4r,forwardDuration:3.00,reverseDuration:2.48,reverseGuard:.08}
+    scene:{key:'scene',label:'Cena',index:1,forward:videos.v2f,reverse:videos.v2r,forwardDuration:2.08,reverseDuration:2.08,reverseGuard:.18},
+    light:{key:'light',label:'Iluminação',index:2,forward:videos.v3f,reverse:videos.v3r,forwardDuration:2.08,reverseDuration:2.04,reverseGuard:.08},
+    colorway:{key:'colorway',label:'Vestuário',index:3,forward:videos.v1f,reverse:videos.v1r,forwardDuration:2.08,reverseDuration:2.08,reverseGuard:.08},
+    fullLook:{key:'fullLook',label:'Elenco',index:4,forward:videos.v4f,reverse:videos.v4r,forwardDuration:3.00,reverseDuration:2.48,reverseGuard:.08}
   };
   var scene='base';
   var playback='loading';
@@ -249,7 +249,7 @@ button.cell:disabled{cursor:default}
       videos.v1f.classList.add('is-visible');
       visibleVideo=videos.v1f;
       playback='ready';
-      announce('Scene ready. Select a state.');
+      announce('Cena pronta. Selecione um estado.');
     }
   }
   function onLoaded(){refreshReadiness()}
@@ -321,7 +321,7 @@ button.cell:disabled{cursor:default}
     if(!valid(t)){return}
     controller.classList.remove('collapsing','expanding');
     controller.classList.add('selected');
-    btn.textContent='Reset';
+    btn.textContent='Redefinir';
     btn.disabled=false;
     btn.setAttribute('aria-hidden','false');
     btn.removeAttribute('tabindex');
@@ -333,7 +333,7 @@ button.cell:disabled{cursor:default}
     locked=false;
     activeBranch=branch;
     activeButton=btn;
-    announce(branch.label+' selected. Reset is available.');
+    announce(branch.label+' selecionado. Redefinir está disponível.');
     if(originHadFocus){try{btn.focus({preventScroll:true})}catch(e){btn.focus()}}
   }
   function beginExpand(btn){
@@ -355,7 +355,7 @@ button.cell:disabled{cursor:default}
     activeBranch=null;
     activeButton=null;
     restoreBaseControls(originHadFocus?branch.key:null);
-    announce('Base scene restored. Select a state.');
+    announce('Cena base restaurada. Selecione um estado.');
   }
 
   function PausableDeadline(ms,onTimeout){
@@ -518,8 +518,8 @@ button.cell:disabled{cursor:default}
     playback='error';
     locked=false;
     failureAction={phase:phase,branch:branch.key};
-    setNotice('Transition could not complete.',true);
-    announce('Transition failed. Retry is available.');
+    setNotice('Não foi possível concluir a transição.',true);
+    announce('Falha na transição. Tentar novamente está disponível.');
     if(phase==='forward'){
       controller.classList.remove('collapsing','selected','expanding');
       setCap(0);
@@ -536,7 +536,7 @@ button.cell:disabled{cursor:default}
       activeBranch=branch;
       activeButton=btn;
       btn.classList.add('chosen');
-      btn.textContent='Reset';
+      btn.textContent='Redefinir';
       btn.disabled=false;
       buttons.forEach(function(other){
         if(other!==btn){other.disabled=true;other.setAttribute('aria-hidden','true');other.setAttribute('tabindex','-1')}
@@ -558,12 +558,12 @@ button.cell:disabled{cursor:default}
     originHadFocus=(document.activeElement===btn);
     disableAll();
     beginCollapse(btn);
-    announce('Loading '+branch.label+' transition.');
+    announce('Carregando transição de '+branch.label+'.');
     var alreadyVisible=(visibleVideo===branch.forward);
     prepareAndPlay(branch.forward,t,alreadyVisible).then(function(){
       if(!valid(t)){return}
       playback='playing';
-      announce('Playing '+branch.label+' transition.');
+      announce('Reproduzindo transição de '+branch.label+'.');
       return monitorToHold(branch.forward,branch.forwardDuration,.08,t,true,null);
     }).then(function(){
       if(!valid(t)){return}
@@ -586,7 +586,7 @@ button.cell:disabled{cursor:default}
     disableAll();
     stage.classList.add('title-hidden');
     beginExpand(btn);
-    announce('Returning to base scene.');
+    announce('Retornando à cena base.');
     prepareAndPlay(branch.reverse,t,visibleVideo===branch.reverse).then(function(){
       if(!valid(t)){return}
       playback='playing';
