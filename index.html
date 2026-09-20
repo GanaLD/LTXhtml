@@ -650,12 +650,6 @@ button.cell:disabled{cursor:default}
     if(activeButton && (controller.classList.contains('collapsing')||controller.classList.contains('selected'))){measureTravel(activeButton)}
   });
 
-  document.addEventListener('visibilitychange',function(){
-    if(document.hidden && playback==='playing' && activeBranch){
-      var v=direction==='forward'?activeBranch.forward:activeBranch.reverse;
-      try{v.pause()}catch(e){}
-    }
-  });
 })();
 </script>
 </body>
